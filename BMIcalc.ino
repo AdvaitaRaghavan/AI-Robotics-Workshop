@@ -27,19 +27,19 @@ void loop(){
       if (BMI < 16) {
         Serial.println("You are severely underweight!");
       }
-      else if (16< BMI < 18.4) {
+      else if (BMI > 16 && BMI < 18.4) {
         Serial.println("You are underweight!");
       }
-      else if (18.5< BMI < 24.9) {
+      else if (BMI>18.5 && BMI < 24.9) {
         Serial.println("Your weight is normal!!");
       }
-      else if (25.0< BMI< 29.9) {
+      else if ( BMI>25.0 && BMI< 29.9) {
         Serial.println("You are overweight");
       }
-      else if (30.0< BMI< 34.9) {
+      else if (BMI>30.0 && BMI< 34.9) {
         Serial.println("You are moderately obese");
       }
-      else if (35.0< BMI< 39.9) {
+      else if (BMI>35.0 && BMI< 39.9) {
         Serial.println("You are severley obese");
       }
       else if (BMI > 40) {
