@@ -186,7 +186,7 @@ int setDirection(int motor, byte direction) {
 int setRPM(int motor, float RPM) {
     attinySlaveArrayBoard[0] = motor ==0? 0x14: 0x24;  // Command 0x14 or 0x24
     attinySlaveArrayBoard[1] = RPM == 0? 6000 : 24000  ;  // Param1 - rpm(L) 
-    attinySlaveArrayBoard[2] = 0x00  ;  // Param2 - rpm(H)
+    attinySlaveArrayBoard[2] = 0x00  ;  // param2 - dummy
     delay(10);
     Wire.beginTransmission(I2CADDR_B);
     Wire.write(attinySlaveArrayBoard, 3); // Sends 3 bytes i2c to Co-processor.
